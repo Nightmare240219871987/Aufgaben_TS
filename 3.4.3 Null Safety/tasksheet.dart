@@ -37,9 +37,9 @@ void main() {
   for (double? r in rain) {
     avgRain += r!;
   }
-  avgRain /= temps.length;
+  avgRain /= rain.length;
 
-  print('Durchschnittstemperatur: $avgTemp');
-  print('Durchschnittswindgeschwindigkeiten: $avgWind');
-  print('Durchschnittsniederschlag: $avgRain');
+  print('Durchschnittstemperatur: $avgTemp °C');
+  print('Durchschnittswindgeschwindigkeiten: $avgWind mm');
+  print('Durchschnittsniederschlag: $avgRain l');
 }
