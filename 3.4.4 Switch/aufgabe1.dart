@@ -1,6 +1,9 @@
+import 'dart:io';
+
 enum Weekday { monday, tuesday, wednesday, thursday, friday, saturday, sunday }
 
 void main() {
+  print(Process.runSync("clear", [], runInShell: true).stdout);
   Weekday? weekday = Weekday.thursday;
   switch (weekday) {
     case Weekday.monday || Weekday.tuesday:

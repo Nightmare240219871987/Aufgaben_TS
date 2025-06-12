@@ -1,6 +1,9 @@
+import 'dart:io';
+
 void main() {
+  print(Process.runSync("clear", [], runInShell: true).stdout);
   String sex = "female";
-  int age = 40;
+  int age = 34;
   switch (sex) {
     case "male":
       switch (age) {
