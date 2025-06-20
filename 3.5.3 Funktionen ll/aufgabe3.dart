@@ -8,11 +8,9 @@ void main() {
 
 int getVocals(String text) {
   int count = 0;
-  for (String s in vocals) {
-    if (text.toUpperCase().contains(s.toUpperCase())) {
-      if (text.allMatches(s).length > 1) {
-        count += text.allMatches(s).length;
-      } else {
+  for (int i = 0; i < text.length; i++) {
+    for (String s in vocals) {
+      if (text[i].toLowerCase() == s) {
         count++;
       }
     }
