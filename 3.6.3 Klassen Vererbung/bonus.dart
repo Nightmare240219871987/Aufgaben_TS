@@ -1,4 +1,4 @@
-class Tool {
+abstract class Tool {
   String name;
   double weight;
   String dimension;
@@ -32,7 +32,7 @@ class Saw extends Tool {
   }
 }
 
-class Grocery {
+abstract class Grocery {
   String name;
   String hersteller;
   double gewicht;
