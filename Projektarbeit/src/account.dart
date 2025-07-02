@@ -22,7 +22,7 @@ class Account {
   List<Goal> _goals = [];
 
   // Singleton Methode
-  static Account getInstance() {
+  static Account? getInstance() {
     if (_account == null) {
       return Account();
     } else {

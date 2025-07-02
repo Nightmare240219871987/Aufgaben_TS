@@ -8,14 +8,12 @@ late Account account;
 late DatabaseRepository db;
 void main() {
   setup();
-  //db.updateAccount("MarcusSchmidt", account!);
   print(account.toJson());
 }
 
 void setup() {
   db = MockDatabaseRepository();
-  account = db.readAccount("MarcusSchmidt")!;
-  /*account = Account.getInstance();
+  account = Account.getInstance()!;
   account.user = User(
     "MarcusSchmidt",
     "Sdfgasdfasdfasdfasd",
@@ -25,5 +23,5 @@ void setup() {
   account.incoming = 1600;
   account.available = 600;
   account.spended = 1000;
-  account.saved = 100;*/
+  account.saved = 100;
 }

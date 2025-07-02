@@ -1,40 +1,97 @@
-import 'dart:convert';
+import 'archivements.dart';
+import 'cost.dart';
 import 'database_repository.dart';
-import 'account.dart';
-import "dart:io";
+import 'goal.dart';
+import 'user.dart';
 
 class MockDatabaseRepository implements DatabaseRepository {
-  void writeFile(String path, String content) {
-    File file = File(path);
-    if (file.existsSync()) {
-      file.deleteSync();
-    } else {
-      file.createSync();
-    }
-    file.writeAsStringSync(content);
-  }
-
-  String readFile(String path) {
-    File file = File(path);
-    file.openRead();
-    return file.readAsStringSync();
+  @override
+  User readUser(String username) {
+    throw UnimplementedError();
   }
 
   @override
-  void updateAccount(String username, Account account) {
-    String content = jsonEncode(account);
-    writeFile("db.txt", content);
+  void updateUser(String username, User user) {
+    throw UnimplementedError();
   }
 
   @override
-  Account readAccount(String username) {
-    String content = readFile("db.txt");
-    content = content.replaceAll(r"\", "");
-    dynamic temp = jsonDecode(content);
-    if (temp is Account) {
-      return temp;
-    }
+  Archivements readArchivements(String username) {
+    throw UnimplementedError();
+  }
 
-    return Account.getInstance();
+  @override
+  void updateArchivements(String username, Archivements archivements) {
+    throw UnimplementedError();
+  }
+
+  @override
+  double readIncoming(String username) {
+    throw UnimplementedError();
+  }
+
+  @override
+  void updateIncoming(String username, double incoming) {
+    print("updateIncoming is triggered");
+  }
+
+  @override
+  double readAvailable(String username) {
+    throw UnimplementedError();
+  }
+
+  @override
+  List<Cost> readCosts(String username) {
+    throw UnimplementedError();
+  }
+
+  @override
+  List<Goal> readGoals(String username) {
+    throw UnimplementedError();
+  }
+
+  @override
+  List<Cost> readMonthlyCosts(String username) {
+    throw UnimplementedError();
+  }
+
+  @override
+  double readSaved(String username) {
+    throw UnimplementedError();
+  }
+
+  @override
+  double readSpended(String username) {
+    throw UnimplementedError();
+  }
+
+  @override
+  void updateAvailable(String username, double available) {
+    print("updateIncoming is triggered");
+  }
+
+  @override
+  void updateCosts(String username, List<Cost> costs) {
+    print("updateIncoming is triggered");
+  }
+
+  @override
+  void updateGoals(String username, List<Goal> goals) {
+    print("updateIncoming is triggered");
+  }
+
+  @override
+  void updateMonthlyCosts(String username, List<Cost> monthlyCosts) {
+    print("updateIncoming is triggered");
+  }
+
+  @override
+  void updateSaved(String username, double saved) {
+    print("updateIncoming is triggered");
+  }
+
+  @override
+  void updateSpended(String username, double spended) {
+    print("updateIncoming is triggered");
   }
 }
