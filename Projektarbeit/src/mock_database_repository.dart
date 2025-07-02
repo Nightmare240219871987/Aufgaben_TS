@@ -67,27 +67,27 @@ class MockDatabaseRepository implements DatabaseRepository {
 
   @override
   void updateAvailable(String username, double available) {
-    print("updateIncoming is triggered");
+    print("updateAvailable is triggered");
   }
 
   @override
   void updateCosts(String username, List<Cost> costs) {
-    print("updateIncoming is triggered");
+    print("updateCosts is triggered");
   }
 
   @override
   void updateGoals(String username, List<Goal> goals) {
-    print("updateIncoming is triggered");
+    print("updateGoals is triggered");
   }
 
   @override
   void updateMonthlyCosts(String username, List<Cost> monthlyCosts) {
-    print("updateIncoming is triggered");
+    print("updateMonthlyCosts is triggered");
   }
 
   @override
   void updateSaved(String username, double saved) {
-    print("updateIncoming is triggered");
+    print("updateSaved is triggered");
   }
 
   @override
