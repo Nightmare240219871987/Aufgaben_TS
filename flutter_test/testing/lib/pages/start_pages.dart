@@ -18,26 +18,24 @@ class StartPage extends StatelessWidget {
           style: TextStyle(fontSize: 35, color: secondaryFontColor),
         ),
       ),
-      body: SafeArea(
-        child: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [primary, primaryLight],
-              begin: Alignment.bottomCenter,
-              end: Alignment.topCenter,
-            ),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [primary, primaryLight],
+            begin: Alignment.bottomCenter,
+            end: Alignment.topCenter,
           ),
-          child: FittedBox(
-            fit: BoxFit.fitWidth,
-            child: Column(
-              children: [
-                Text(
-                  "Hello World",
-                  style: TextStyle(fontSize: 48, color: secondaryFontColor),
-                ),
-              ],
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Center(
+              child: Text(
+                "Hello World",
+                style: TextStyle(fontSize: 48, color: secondaryFontColor),
+              ),
             ),
-          ),
+          ],
         ),
       ),
     );
