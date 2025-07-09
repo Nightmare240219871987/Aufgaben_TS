@@ -1,1 +1,0 @@
-{"_user":"{\"_username\":\"MarcusSchmidt\",\"_password\":\"Sdfgasdfasdfasdfasd\",\"_email\":\"Marcusschmidt2401@hotmail.de\"}","_archivements":"{}","_incoming":1600.0,"_available":600.0,"_spended":1000.0,"_saved":100.0,"_monthlyCosts":[],"_cost":[],"_goals":[]}
